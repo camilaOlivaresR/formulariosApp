@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: () => import('./template/template.module').then(m => m.TemplateModule)
 },
 {
-    path: 'reactive',
+    path: 'reactiv',
     loadChildren: () => import('./reactiv/reactiv.module').then(m => m.ReactivModule)
 },
 {
