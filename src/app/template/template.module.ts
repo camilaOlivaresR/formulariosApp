@@ -1,3 +1,4 @@
+import { CustomMinDirective } from './directiv/custom-min.directives';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +14,8 @@ import { DinamicosComponent } from './dinamicos/dinamicos.component';
   declarations: [
     BasicosComponent,
     SwitchesComponent,
-    DinamicosComponent
+    DinamicosComponent,
+    CustomMinDirective
   ],
   imports: [
     CommonModule,
