@@ -18,6 +18,8 @@ interface Favorito {
   ]
 })
 export class DinamicosComponent {
+
+  nuevoJuego: string = '';
   
   persona: Persona = {
     nombre: 'Camala',
@@ -26,6 +28,15 @@ export class DinamicosComponent {
       {id: 2, nombre: 'Super Mario'},
       {id: 3, nombre: 'Snake'}
     ]
+  }
+
+  agregarJuego() {
+    const nuevoFavorito: Favorito = {
+      id: this.persona.favorito.length + 1,
+      nombre: this.nuevoJuego
+    }
+    this.persona.favorito.push({...nuevoFavorito});
+    this.nuevoJuego = '';
   }
 
   eliminar(index: number ) {
