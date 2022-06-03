@@ -1,4 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+interface Persona {
+  nombre: string;
+  favorito: Favorito[];
+}
+
+interface Favorito {
+  id: number;
+  nombre: string;
+}
+
 
 @Component({
   selector: 'app-dinamicos',
@@ -6,11 +17,23 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class DinamicosComponent implements OnInit {
+export class DinamicosComponent {
+  
+  persona: Persona = {
+    nombre: 'Camala',
+    favorito: [
+      {id: 1, nombre: 'Packman'},
+      {id: 2, nombre: 'Super Mario'},
+      {id: 3, nombre: 'Snake'}
+    ]
+  }
 
-  constructor() { }
+  eliminar(index: number ) {
+    this.persona.favorito.splice(index, 1);
+  }
 
-  ngOnInit(): void {
+  guardar() {
+    console.log('formulario posteado')
   }
 
 }
